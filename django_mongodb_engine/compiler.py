@@ -390,7 +390,7 @@ class SQLInsertCompiler(NonrelInsertCompiler, SQLCompiler):
         if return_id:
             return collection.save(doc, **options)
         else:
-            collection.insert(docs, **options)
+            collection.insert_many(docs, **options)
 
 
 # TODO: Define a common nonrel API for updates and add it to the nonrel
